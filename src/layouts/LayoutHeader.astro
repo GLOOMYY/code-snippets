@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <slot />
+</Layout>

@@ -1,0 +1,48 @@
+---
+
+---
+
+<a class="menu__link" {...Astro.props}>
+  <slot />
+</a>
+<style>
+  /* <reset-style> ============================ */
+  a {
+    text-decoration: none;
+  }
+  /* <main-style> ============================ */
+
+  .menu__link {
+    color: #000;
+    line-height: 2;
+    position: relative;
+  }
+
+  .menu__link::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: -0.25rem;
+    right: 0;
+    transition:
+      right 0.4s,
+      width 0.4s,
+      left 0.4s;
+  }
+
+  .menu__link:hover::before {
+    width: 100%;
+    left: 0;
+  }
+  @media (prefers-color-scheme: dark) {
+    .menu__link {
+      color: #fff;
+    }
+    .menu__link::before {
+      background-color: #fff;
+    }
+  }
+</style>
