@@ -1,0 +1,1 @@
+export const GITHUB:string = "https://github.com/GLOOMYY";

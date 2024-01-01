@@ -1,0 +1,26 @@
+---
+import { GITHUB } from "../info";
+import NextButton from "../components/NextButton.astro";
+import Layout from "../layouts/Layout.astro";
+
+const description: string = "Sitio web donde guardar mis snippets de codigo";
+const title: string = "Code Snippets";
+---
+
+<Layout title={title} description={description}>
+  <main>
+    <section class="w-full mx-auto px-10 lg:w-[740px] py-44">
+      <h1 class="text-8xl font-bold flex flex-row gap-x-5 pb-4">
+        Code Snippets
+      </h1>
+      <h2 class="text-3xl font-semibold opacity-75 text-wrap pb-20">
+        <a
+          href={GITHUB}
+          class="hover:text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 transition duration-300 ease-in-out"
+          >By GLOOMY</a
+        >
+      </h2>
+      <NextButton />
+    </section>
+  </main>
+</Layout>
